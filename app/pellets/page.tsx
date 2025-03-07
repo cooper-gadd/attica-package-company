@@ -164,6 +164,27 @@ export default function PelletsPage() {
           </section>
         </div>
       </div>
+
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <section className="py-24">
+            <div className="container">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-bold mb-6">Ready to Order?</h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Contact us to place an order for our premium pellets.
+                </p>
+                <a
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
+                >
+                  Contact Us
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
     </main>
   );
 }
