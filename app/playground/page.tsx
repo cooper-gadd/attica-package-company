@@ -9,6 +9,33 @@ export const metadata: Metadata = {
     "We offer Certified Playground Material that is safe for your kids to play on.",
 };
 
+const distributions = [
+  {
+    icon: TreeDeciduous,
+    title: "Parks",
+    description:
+      "Providing certified playground material for public park playground areas.",
+  },
+  {
+    icon: School,
+    title: "Schools",
+    description:
+      "Supplying safe, tested playground material for school playground zones.",
+  },
+  {
+    icon: Building2,
+    title: "Municipalities",
+    description:
+      "Distributing certified playground material to municipal recreational areas.",
+  },
+  {
+    icon: Home,
+    title: "Residential Homes",
+    description:
+      "Delivering quality playground material for residential backyard play areas.",
+  },
+];
+
 export default function PlaygroundPage() {
   return (
     <main>
@@ -75,65 +102,21 @@ export default function PlaygroundPage() {
                 Where We Distribute
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <Card className="bg-muted/40">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <TreeDeciduous className="h-5 w-5" />
-                      Parks
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Providing certified playground material for public park
-                      playground areas.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-muted/40">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <School className="h-5 w-5" />
-                      Schools
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Supplying safe, tested playground material for school
-                      playground zones.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-muted/40">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Building2 className="h-5 w-5" />
-                      Municipalities
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Distributing certified playground material to municipal
-                      recreational areas.
-                    </p>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-muted/40">
-                  <CardHeader>
-                    <CardTitle className="flex items-center gap-2">
-                      <Home className="h-5 w-5" />
-                      Residential Homes
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      Delivering quality playground material for residential
-                      backyard play areas.
-                    </p>
-                  </CardContent>
-                </Card>
+                {distributions.map((item, index) => (
+                  <Card key={index} className="bg-muted/40">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <item.icon className="h-5 w-5" />
+                        {item.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground">
+                        {item.description}
+                      </p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
             </div>
           </section>
