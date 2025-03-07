@@ -25,12 +25,8 @@ export function SiteHeader() {
       href: "/playground",
     },
     {
-      title: "BBQ Pellets",
-      href: "/bbq-pellets",
-    },
-    {
-      title: "Heating Pellets",
-      href: "/heating-pellets",
+      title: "Pellets",
+      href: "/pellets",
     },
     {
       title: "Contact",
@@ -84,7 +80,7 @@ export function SiteHeader() {
                       href="/"
                       className="flex items-center gap-2 text-lg font-semibold md:text-base"
                     >
-                      <Trees className="h-12 w-12" />
+                      <Trees className="h-6 w-6" />
                       <span className="sr-only">
                         Attica Package Company Inc.
                       </span>
