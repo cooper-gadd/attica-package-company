@@ -17,7 +17,7 @@ export default function ContactPage() {
                   Contact Attica Package Company Inc.
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Call to get a quote today.
+                  Reach out to us for a quote.
                 </p>
               </div>
             </div>
