@@ -18,7 +18,7 @@ export default function PlaygroundPage() {
                 <h1 className="text-4xl font-bold mb-4">
                   Material For Your Playground
                 </h1>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground">
                   We offer Certified Playground Material that is safe for your
                   kids to play on. We have documentation that is available upon
                   request to support our Certified Playground Material.

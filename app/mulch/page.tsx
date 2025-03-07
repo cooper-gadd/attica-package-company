@@ -18,7 +18,7 @@ export default function MulchPage() {
                 <h1 className="text-4xl font-bold mb-4">
                   Mulch For Your Garden
                 </h1>
-                <p className="text-lg text-muted-foreground mb-6">
+                <p className="text-lg text-muted-foreground">
                   We offer both natural brown and dyed black mulch for your
                   garden. The natural brown mulch is made from a blend of
                   hardwoods and is quad ground to a fine texture. The dyed black

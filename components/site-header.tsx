@@ -25,8 +25,12 @@ export function SiteHeader() {
       href: "/playground",
     },
     {
-      title: "Pellets",
-      href: "/pellets",
+      title: "BBQ Pellets",
+      href: "/bbq-pellets",
+    },
+    {
+      title: "Heating Pellets",
+      href: "/heating-pellets",
     },
     {
       title: "Contact",
