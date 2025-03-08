@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { Building2, Home, School, TreeDeciduous } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
@@ -64,6 +64,32 @@ export default function PlaygroundPage() {
 
       <div className="border-grid border-b">
         <div className="container-wrapper">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            {distributions.map((item, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "border-grid border-b",
+                  index !== distributions.length - 1 && "md:border-r",
+                )}
+              >
+                <section className="py-24">
+                  <div className="container flex flex-col items-center text-center">
+                    <div className="flex items-center gap-2 mb-2">
+                      <item.icon className="h-5 w-5" />
+                      <h2 className="text-2xl font-semibold">{item.title}</h2>
+                    </div>
+                    <p className="text-muted-foreground">{item.description}</p>
+                  </div>
+                </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
           <section className="py-24">
             <div className="container">
               <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -93,35 +119,6 @@ export default function PlaygroundPage() {
                     />
                   </div>
                 </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <div className="border-grid border-b">
-        <div className="container-wrapper">
-          <section className="py-24">
-            <div className="container">
-              <h2 className="text-3xl font-semibold text-center mb-12">
-                Where We Distribute
-              </h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {distributions.map((item, index) => (
-                  <Card key={index} className="bg-muted/40">
-                    <CardHeader>
-                      <CardTitle className="flex items-center gap-2">
-                        <item.icon className="h-5 w-5" />
-                        {item.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-muted-foreground">
-                        {item.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                ))}
               </div>
             </div>
           </section>
