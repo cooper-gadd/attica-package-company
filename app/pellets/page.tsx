@@ -1,59 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Flame, LucideProps, Utensils } from "lucide-react";
+import { Apple, Flame, Leaf, TreeDeciduous } from "lucide-react";
 import { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
-import { ForwardRefExoticComponent, RefAttributes } from "react";
 
 export const metadata: Metadata = {
   title: "Pellets",
   description:
     "We offer premium pellets for both BBQ grilling and home heating, providing high-quality options for all your pellet needs.",
 };
-
-const pellets: {
-  title: string;
-  type: "BBQ" | "Heating";
-  description: string;
-  image: string;
-  icon: ForwardRefExoticComponent<
-    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
-  >;
-}[] = [
-  {
-    title: "Dry Creek Apple Pellets",
-    type: "BBQ",
-    description:
-      "These apple pellets are made from locally source apple hardwoods. The apple pellets infuse your chicken, pork, seafood and more with a sweet and smoky favor combination.",
-    image: "/pellets-apple.jpg",
-    icon: Utensils,
-  },
-  {
-    title: "Dry Creek Sweet Hickory Pellets",
-    type: "BBQ",
-    description:
-      "These sweet hickory pellets will infuse your meats, veggies, seafood and more with a bold hickory, maple and cherry flavor blended together.",
-    image: "/pellets-sweet-hickory.jpg",
-    icon: Utensils,
-  },
-  {
-    title: "Dry Creek Northern Hardwoods Pellets",
-    type: "BBQ",
-    description:
-      "These pellets will combine tart cherry and sweet maple hardwoods to add flavor to your meats, veggies, seafood and more.",
-    image: "/pellets-northern-hardwoods.jpg",
-    icon: Utensils,
-  },
-  {
-    title: "Dry Creek Wood Pellets for Fuel",
-    type: "Heating",
-    description:
-      "These heating pellets are made from locally sourced hardwoods and are PFI certified premium grade pellet fuel. They are sold by the ton.",
-    image: "/pellets-premium.jpg",
-    icon: Flame,
-  },
-];
 
 const pelletFuelPerformance = [
   {
@@ -81,7 +36,6 @@ const pelletFuelPerformance = [
 export default function PelletsPage() {
   return (
     <main>
-      {/* Header Section */}
       <div className="border-grid border-b">
         <div className="container-wrapper">
           <section className="py-24">
@@ -101,47 +55,75 @@ export default function PelletsPage() {
         </div>
       </div>
 
-      {/* Pellets Section */}
-      {pellets.map((pellet) => (
-        <div key={pellet.title} className="border-grid border-b">
-          <div className="container-wrapper">
-            <section className="py-24">
-              <div className="container">
-                <div className="flex flex-col md:flex-row gap-12">
-                  <div className="w-full md:w-[300px] flex-shrink-0">
-                    <div className="max-w-[75%] mx-auto aspect-[3/4] relative overflow-hidden rounded-lg">
-                      <Image
-                        src={pellet.image}
-                        alt={pellet.title}
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <div className="grid grid-cols-1 md:grid-cols-4">
+            <div className="border-grid border-b md:border-r">
+              <section className="py-24">
+                <div className="container">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Apple className="h-5 w-5" />
+                    <h2 className="text-2xl font-semibold">Apple Wood</h2>
                   </div>
-                  <div className="flex-grow">
-                    <h2 className="text-3xl font-semibold mb-4">
-                      {pellet.title}
-                    </h2>
-                    <div className="flex items-center gap-2 mb-6">
-                      <pellet.icon className="h-5 w-5 text-primary" />
-                      <span className="text-muted-foreground">
-                        {pellet.type === "BBQ"
-                          ? "Cooking Pellets"
-                          : "Heating Pellets"}
-                      </span>
-                    </div>
-                    <p className="text-muted-foreground text-lg leading-relaxed">
-                      {pellet.description}
-                    </p>
-                  </div>
+                  <p className="text-muted-foreground">
+                    Made from locally source apple hardwoods, infusing your
+                    chicken, pork, seafood and more with a sweet and smoky favor
+                    combination.
+                  </p>
                 </div>
-              </div>
-            </section>
+              </section>
+            </div>
+
+            <div className="border-grid border-b md:border-r">
+              <section className="py-24">
+                <div className="container">
+                  <div className="flex items-center gap-2 mb-2">
+                    <TreeDeciduous className="h-5 w-5" />
+                    <h2 className="text-2xl font-semibold">Sweet Hickory</h2>
+                  </div>
+                  <p className="text-muted-foreground">
+                    A bold blend of hickory, maple and cherry flavors perfect
+                    for meats, veggies, seafood and more.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div className="border-grid border-b md:border-r">
+              <section className="py-24">
+                <div className="container">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Leaf className="h-5 w-5" />
+                    <h2 className="text-2xl font-semibold">
+                      Northern Hardwoods
+                    </h2>
+                  </div>
+                  <p className="text-muted-foreground">
+                    A combination of tart cherry and sweet maple hardwoods to
+                    add unique flavor to your cooking.
+                  </p>
+                </div>
+              </section>
+            </div>
+
+            <div className="border-grid border-b">
+              <section className="py-24">
+                <div className="container">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Flame className="h-5 w-5" />
+                    <h2 className="text-2xl font-semibold">Premium Heating</h2>
+                  </div>
+                  <p className="text-muted-foreground">
+                    PFI certified premium grade pellet fuel made from locally
+                    sourced hardwoods, sold by the ton.
+                  </p>
+                </div>
+              </section>
+            </div>
           </div>
         </div>
-      ))}
+      </div>
 
-      {/* Pellet Fuel Performance Section */}
       <div className="border-grid border-b">
         <div className="container-wrapper">
           <section className="py-24">
@@ -162,6 +144,24 @@ export default function PelletsPage() {
                     </CardContent>
                   </Card>
                 ))}
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <section className="py-24">
+            <div className="container">
+              <div className="max-w-3xl mx-auto text-center">
+                <h2 className="text-3xl font-bold mb-6">Ready to Order?</h2>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Contact us to place an order for our premium pellets.
+                </p>
+                <Button asChild>
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
               </div>
             </div>
           </section>

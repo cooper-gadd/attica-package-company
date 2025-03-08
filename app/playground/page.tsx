@@ -85,7 +85,7 @@ export default function PlaygroundPage() {
                 <div className="w-full lg:w-1/2">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                     <Image
-                      src="/playground-home.jpg"
+                      src="/placeholder.svg"
                       alt="Playground Home"
                       width={800}
                       height={600}
@@ -148,7 +148,7 @@ export default function PlaygroundPage() {
                 <div className="w-full lg:w-1/2">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                     <Image
-                      src="/playground-school.jpg"
+                      src="/placeholder.svg"
                       alt="Playground School"
                       width={800}
                       height={600}

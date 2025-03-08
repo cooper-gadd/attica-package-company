@@ -112,7 +112,7 @@ export default function MulchPage() {
                 <div className="w-full lg:w-1/2">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                     <Image
-                      src="/mulch-brown-house-corner.jpg"
+                      src="/placeholder.svg"
                       alt="Mulch Brown House Corner"
                       width={800}
                       height={600}
@@ -150,7 +150,7 @@ export default function MulchPage() {
                 <div className="w-full lg:w-1/2">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                     <Image
-                      src="/mulch-black-house-gate.jpg"
+                      src="/placeholder.svg"
                       alt="Mulch Black House Gate"
                       width={800}
                       height={600}
