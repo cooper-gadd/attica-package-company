@@ -1,7 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { CarFront, Leaf, TreeDeciduous, Truck } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Mulch",
@@ -47,10 +49,13 @@ export default function MulchPage() {
                 <h1 className="text-4xl font-bold mb-4">
                   Mulch For Your Garden
                 </h1>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-muted-foreground mb-6">
                   We offer both natural brown and dyed black mulch for your
                   garden.
                 </p>
+                <Button asChild>
+                  <Link href="/contact">Get a Quote</Link>
+                </Button>
               </div>
             </div>
           </section>
@@ -182,28 +187,6 @@ export default function MulchPage() {
                     </CardContent>
                   </Card>
                 ))}
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
-
-      <div className="border-grid border-b">
-        <div className="container-wrapper">
-          <section className="py-24">
-            <div className="container">
-              <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-6">Ready to Order?</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Contact us to place an order for delivery or schedule a
-                  pick-up.
-                </p>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
-                >
-                  Contact Us
-                </a>
               </div>
             </div>
           </section>

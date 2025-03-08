@@ -1,7 +1,9 @@
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Home, School, TreeDeciduous } from "lucide-react";
 import { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Playground",
@@ -47,10 +49,13 @@ export default function PlaygroundPage() {
                 <h1 className="text-4xl font-bold mb-4">
                   Material For Your Playground
                 </h1>
-                <p className="text-lg text-muted-foreground">
+                <p className="text-lg text-muted-foreground mb-6">
                   We offer Certified Playground Material that is safe for your
                   kids to play on.
                 </p>
+                <Button asChild>
+                  <Link href="/contact">Get a Quote</Link>
+                </Button>
               </div>
             </div>
           </section>
@@ -167,12 +172,9 @@ export default function PlaygroundPage() {
                   We have documentation available upon request for our certified
                   playground mulch.
                 </p>
-                <a
-                  href="/contact"
-                  className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2"
-                >
-                  Contact Us
-                </a>
+                <Button asChild>
+                  <Link href="/contact">Contact Us</Link>
+                </Button>
               </div>
             </div>
           </section>
