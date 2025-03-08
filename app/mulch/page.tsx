@@ -15,26 +15,27 @@ const mulchTypes = [
   {
     icon: Leaf,
     title: "Natural Brown",
-    description: "Made from a blend of hardwoods, quad ground to a fine texture."
+    description:
+      "Made from a blend of hardwoods, quad ground to a fine texture.",
   },
   {
     icon: TreeDeciduous,
     title: "Dyed Black",
-    description: "Triple ground hardwoods colored with black colorant."
-  }
+    description: "Triple ground hardwoods colored with black colorant.",
+  },
 ];
 
 const pickupOptions = [
   {
     icon: Truck,
     title: "Delivery",
-    description: "Available for delivery to your location with our trucks."
+    description: "Available for delivery to your location with our trucks.",
   },
   {
     icon: CarFront,
     title: "Self Pick-up",
-    description: "Bring your truck or trailer to load mulch at our facility."
-  }
+    description: "Bring your truck or trailer to load mulch at our facility.",
+  },
 ];
 
 export default function MulchPage() {
@@ -69,11 +70,11 @@ export default function MulchPage() {
                 key={index}
                 className={cn(
                   "border-grid border-b",
-                  index !== mulchTypes.length - 1 && "md:border-r"
+                  index !== mulchTypes.length - 1 && "md:border-r",
                 )}
               >
                 <section className="py-24">
-                  <div className="container md:flex md:flex-col md:items-center md:text-center">
+                  <div className="container flex flex-col items-center text-center">
                     <div className="flex items-center gap-2 mb-2">
                       <item.icon className="h-5 w-5" />
                       <h2 className="text-2xl font-semibold">{item.title}</h2>
@@ -168,11 +169,11 @@ export default function MulchPage() {
                 key={index}
                 className={cn(
                   "border-grid border-b",
-                  index !== pickupOptions.length - 1 && "md:border-r"
+                  index !== pickupOptions.length - 1 && "md:border-r",
                 )}
               >
                 <section className="py-24">
-                  <div className="container md:flex md:flex-col md:items-center md:text-center">
+                  <div className="container flex flex-col items-center text-center">
                     <div className="flex items-center gap-2 mb-2">
                       <item.icon className="h-5 w-5" />
                       <h2 className="text-2xl font-semibold">{item.title}</h2>
