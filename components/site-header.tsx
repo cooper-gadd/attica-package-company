@@ -45,6 +45,7 @@ export function SiteHeader() {
                 className="flex items-center gap-2 text-lg font-semibold md:text-base"
               >
                 <Trees className="h-6 w-6" />
+                Attica Package Company Inc.
                 <span className="sr-only">Attica Package Company Inc.</span>
               </Link>
               {navItems.map((item) => (
@@ -81,6 +82,7 @@ export function SiteHeader() {
                       className="flex items-center gap-2 text-lg font-semibold md:text-base"
                     >
                       <Trees className="h-6 w-6" />
+                      APC Inc.
                       <span className="sr-only">
                         Attica Package Company Inc.
                       </span>
