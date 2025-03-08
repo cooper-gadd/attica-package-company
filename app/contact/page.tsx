@@ -114,7 +114,7 @@ export default function ContactPage() {
                 )}
               >
                 <section className="py-24">
-                  <div className="container md:flex md:flex-col md:items-center md:text-center">
+                  <div className="container flex flex-col items-center text-center">
                     <div className="flex items-center gap-2 mb-2">
                       <Clock className="h-5 w-5" />
                       <h2 className="text-2xl font-semibold">{item.title}</h2>
