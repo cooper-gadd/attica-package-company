@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { Apple, Flame, Leaf, TreeDeciduous } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -9,6 +10,37 @@ export const metadata: Metadata = {
   description:
     "We offer premium pellets for both BBQ grilling and home heating, providing high-quality options for all your pellet needs.",
 };
+
+const pelletTypes = [
+  {
+    icon: Apple,
+    iconColor: "text-green-500",
+    title: "Apple Wood",
+    description:
+      "Made from locally source apple hardwoods, infusing your chicken, pork, seafood and more with a sweet and smoky favor combination.",
+  },
+  {
+    icon: TreeDeciduous,
+    iconColor: "text-amber-500",
+    title: "Sweet Hickory",
+    description:
+      "A bold blend of hickory, maple and cherry flavors perfect for meats, veggies, seafood and more.",
+  },
+  {
+    icon: Leaf,
+    iconColor: "text-red-500",
+    title: "Northern Hardwoods",
+    description:
+      "A combination of tart cherry and sweet maple hardwoods to add unique flavor to your cooking.",
+  },
+  {
+    icon: Flame,
+    iconColor: "text-orange-500",
+    title: "Premium Heating",
+    description:
+      "PFI certified premium grade pellet fuel made from locally sourced hardwoods, sold by the ton.",
+  },
+];
 
 const pelletFuelPerformance = [
   {
@@ -58,68 +90,25 @@ export default function PelletsPage() {
       <div className="border-grid border-b">
         <div className="container-wrapper">
           <div className="grid grid-cols-1 md:grid-cols-4">
-            <div className="border-grid border-b md:border-r">
-              <section className="py-24">
-                <div className="container flex flex-col items-center text-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Apple className="h-5 w-5 text-green-500" />
-                    <h2 className="text-2xl font-semibold">Apple Wood</h2>
+            {pelletTypes.map((item, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "border-grid border-b",
+                  index !== pelletTypes.length - 1 && "md:border-r",
+                )}
+              >
+                <section className="py-24">
+                  <div className="container md:flex md:flex-col md:items-center md:text-center">
+                    <div className="flex items-center gap-2 mb-2">
+                      <item.icon className={cn("h-5 w-5", item.iconColor)} />
+                      <h2 className="text-2xl font-semibold">{item.title}</h2>
+                    </div>
+                    <p className="text-muted-foreground">{item.description}</p>
                   </div>
-                  <p className="text-muted-foreground">
-                    Made from locally source apple hardwoods, infusing your
-                    chicken, pork, seafood and more with a sweet and smoky favor
-                    combination.
-                  </p>
-                </div>
-              </section>
-            </div>
-
-            <div className="border-grid border-b md:border-r">
-              <section className="py-24">
-                <div className="container flex flex-col items-center text-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <TreeDeciduous className="h-5 w-5 text-amber-500" />
-                    <h2 className="text-2xl font-semibold">Sweet Hickory</h2>
-                  </div>
-                  <p className="text-muted-foreground">
-                    A bold blend of hickory, maple and cherry flavors perfect
-                    for meats, veggies, seafood and more.
-                  </p>
-                </div>
-              </section>
-            </div>
-
-            <div className="border-grid border-b md:border-r">
-              <section className="py-24">
-                <div className="container flex flex-col items-center text-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Leaf className="h-5 w-5 text-red-500" />
-                    <h2 className="text-2xl font-semibold">
-                      Northern Hardwoods
-                    </h2>
-                  </div>
-                  <p className="text-muted-foreground">
-                    A combination of tart cherry and sweet maple hardwoods to
-                    add unique flavor to your cooking.
-                  </p>
-                </div>
-              </section>
-            </div>
-
-            <div className="border-grid border-b">
-              <section className="py-24">
-                <div className="container flex flex-col items-center text-center">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Flame className="h-5 w-5 text-orange-500" />
-                    <h2 className="text-2xl font-semibold">Premium Heating</h2>
-                  </div>
-                  <p className="text-muted-foreground">
-                    PFI certified premium grade pellet fuel made from locally
-                    sourced hardwoods, sold by the ton.
-                  </p>
-                </div>
-              </section>
-            </div>
+                </section>
+              </div>
+            ))}
           </div>
         </div>
       </div>
