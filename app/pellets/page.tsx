@@ -60,7 +60,7 @@ export default function PelletsPage() {
           <div className="grid grid-cols-1 md:grid-cols-4">
             <div className="border-grid border-b md:border-r">
               <section className="py-24">
-                <div className="container">
+                <div className="container flex flex-col items-center text-center">
                   <div className="flex items-center gap-2 mb-2">
                     <Apple className="h-5 w-5 text-green-500" />
                     <h2 className="text-2xl font-semibold">Apple Wood</h2>
@@ -76,7 +76,7 @@ export default function PelletsPage() {
 
             <div className="border-grid border-b md:border-r">
               <section className="py-24">
-                <div className="container">
+                <div className="container flex flex-col items-center text-center">
                   <div className="flex items-center gap-2 mb-2">
                     <TreeDeciduous className="h-5 w-5 text-amber-500" />
                     <h2 className="text-2xl font-semibold">Sweet Hickory</h2>
@@ -91,7 +91,7 @@ export default function PelletsPage() {
 
             <div className="border-grid border-b md:border-r">
               <section className="py-24">
-                <div className="container">
+                <div className="container flex flex-col items-center text-center">
                   <div className="flex items-center gap-2 mb-2">
                     <Leaf className="h-5 w-5 text-red-500" />
                     <h2 className="text-2xl font-semibold">
@@ -108,7 +108,7 @@ export default function PelletsPage() {
 
             <div className="border-grid border-b">
               <section className="py-24">
-                <div className="container">
+                <div className="container flex flex-col items-center text-center">
                   <div className="flex items-center gap-2 mb-2">
                     <Flame className="h-5 w-5 text-orange-500" />
                     <h2 className="text-2xl font-semibold">Premium Heating</h2>
