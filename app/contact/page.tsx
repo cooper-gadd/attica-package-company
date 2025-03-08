@@ -70,6 +70,32 @@ export default function ContactPage() {
 
       <div className="border-grid border-b">
         <div className="container-wrapper">
+          <div className="grid grid-cols-1 md:grid-cols-2">
+            {businessHours.map((item, index) => (
+              <div
+                key={index}
+                className={cn(
+                  "border-grid border-b",
+                  index !== businessHours.length - 1 && "md:border-r",
+                )}
+              >
+                <section className="py-24">
+                  <div className="container flex flex-col items-center text-center">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Clock className="h-5 w-5" />
+                      <h2 className="text-2xl font-semibold">{item.title}</h2>
+                    </div>
+                    <p className="text-muted-foreground">{item.hours}</p>
+                  </div>
+                </section>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
           <section className="py-24">
             <div className="container">
               <h2 className="text-3xl font-semibold text-center mb-12">
@@ -99,32 +125,6 @@ export default function ContactPage() {
               </div>
             </div>
           </section>
-        </div>
-      </div>
-
-      <div className="border-grid border-b">
-        <div className="container-wrapper">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            {businessHours.map((item, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "border-grid border-b",
-                  index !== businessHours.length - 1 && "md:border-r",
-                )}
-              >
-                <section className="py-24">
-                  <div className="container flex flex-col items-center text-center">
-                    <div className="flex items-center gap-2 mb-2">
-                      <Clock className="h-5 w-5" />
-                      <h2 className="text-2xl font-semibold">{item.title}</h2>
-                    </div>
-                    <p className="text-muted-foreground">{item.hours}</p>
-                  </div>
-                </section>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </main>
