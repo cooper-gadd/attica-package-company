@@ -14,24 +14,28 @@ export const metadata: Metadata = {
 const distributions = [
   {
     icon: TreeDeciduous,
+    iconColor: "text-green-600",
     title: "Parks",
     description:
       "Providing certified playground material for public park playground areas.",
   },
   {
     icon: School,
+    iconColor: "text-blue-500",
     title: "Schools",
     description:
       "Supplying safe, tested playground material for school playground zones.",
   },
   {
     icon: Building2,
+    iconColor: "text-purple-500",
     title: "Municipalities",
     description:
       "Distributing certified playground material to municipal recreational areas.",
   },
   {
     icon: Home,
+    iconColor: "text-orange-500",
     title: "Residential Homes",
     description:
       "Delivering quality playground material for residential backyard play areas.",
@@ -76,7 +80,7 @@ export default function PlaygroundPage() {
                 <section className="py-24">
                   <div className="container flex flex-col items-center text-center">
                     <div className="flex items-center gap-2 mb-2">
-                      <item.icon className="h-5 w-5" />
+                      <item.icon className={cn("h-5 w-5", item.iconColor)} />
                       <h2 className="text-2xl font-semibold">{item.title}</h2>
                     </div>
                     <p className="text-muted-foreground">{item.description}</p>

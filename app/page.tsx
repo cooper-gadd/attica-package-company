@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { Flame, Leaf, TreeDeciduous } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -7,6 +8,7 @@ import Link from "next/link";
 const products = [
   {
     icon: Leaf,
+    iconColor: "text-amber-600",
     title: "Garden Mulch",
     description:
       "Premium natural brown and dyed black mulch for your landscaping needs.",
@@ -14,6 +16,7 @@ const products = [
   },
   {
     icon: TreeDeciduous,
+    iconColor: "text-green-600",
     title: "Playground Material",
     description:
       "Certified safe playground material for parks, schools, and residential areas.",
@@ -21,6 +24,7 @@ const products = [
   },
   {
     icon: Flame,
+    iconColor: "text-orange-500",
     title: "Premium Pellets",
     description:
       "High-quality BBQ and heating pellets made from local hardwoods.",
@@ -61,7 +65,9 @@ export default function Home() {
                   <Card key={index} className="bg-muted/40">
                     <CardHeader>
                       <CardTitle className="flex items-center gap-2">
-                        <product.icon className="h-5 w-5" />
+                        <product.icon
+                          className={cn("h-5 w-5", product.iconColor)}
+                        />
                         {product.title}
                       </CardTitle>
                     </CardHeader>
