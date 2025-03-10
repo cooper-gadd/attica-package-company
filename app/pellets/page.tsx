@@ -3,6 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Apple, Flame, Leaf, TreeDeciduous } from "lucide-react";
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -79,7 +80,7 @@ export default function PelletsPage() {
                   100% local hardwoods.
                 </p>
                 <Button asChild>
-                  <Link href="/contact">Get a Quote</Link>
+                  <Link href="/contact">Contact Us for a Quote</Link>
                 </Button>
               </div>
             </div>
@@ -110,6 +111,79 @@ export default function PelletsPage() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <section className="py-24">
+            <div className="container">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="w-full lg:w-1/2 text-center md:text-start">
+                  <h2 className="text-3xl font-semibold mb-6">
+                    Pellets for your BBQ
+                  </h2>
+                  <div className="space-y-6">
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      We carry a variety of Dry Creek BBQ pellets that are
+                      perfect for your grill or smoker. These pellets are 100%
+                      All-Natural premium-grade BBQ Pellets, locally sourced for
+                      a next-level, rich flavor. They are available in a variety
+                      of flavors. Whether you are grilling chicken, pork, beef,
+                      seafood or veggies, these pellets will add a delicious
+                      flavor to your food. They are sold by the bag.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full lg:w-1/2">
+                  <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg"
+                      alt="Playground Home"
+                      width={800}
+                      height={600}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <section className="py-24">
+            <div className="container">
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="w-full lg:w-1/2 text-center md:text-start">
+                  <h2 className="text-3xl font-semibold mb-6">
+                    Pellets for your home
+                  </h2>
+                  <div className="space-y-6">
+                    <p className="text-lg text-muted-foreground leading-relaxed">
+                      We offer wood pellets for heating your home. The pellets
+                      are made from locally sourced hardwoods and are PFI
+                      certified premium grade pellet fuel. They are sold by the
+                      ton.
+                    </p>
+                  </div>
+                </div>
+                <div className="w-full lg:w-1/2">
+                  <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
+                    <Image
+                      src="/placeholder.svg"
+                      alt="Playground Home"
+                      width={800}
+                      height={600}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
 

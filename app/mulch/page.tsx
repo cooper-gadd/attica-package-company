@@ -56,7 +56,7 @@ export default function MulchPage() {
                   garden.
                 </p>
                 <Button asChild>
-                  <Link href="/contact">Get a Quote</Link>
+                  <Link href="/contact">Contact Us for a Quote</Link>
                 </Button>
               </div>
             </div>
