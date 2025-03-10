@@ -1,3 +1,4 @@
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
 import { Clock, Mail, MapPinHouse, Phone, Printer } from "lucide-react";
 import { Metadata } from "next";
@@ -13,7 +14,8 @@ const contactInfo = [
     title: "Address",
     content: "45 Windsor St, Attica, NY 14011",
     href: "https://www.google.com/maps/search/?api=1&query=45 Windsor St, Attica, NY 14011",
-    external: true,
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
   {
     icon: Phone,
@@ -31,19 +33,18 @@ const contactInfo = [
     icon: Printer,
     title: "Fax",
     content: "(585) 591-3655",
+    href: "fax:585-591-3655",
   },
 ];
 
 const businessHours = [
   {
-    icon: Clock,
     title: "Weekdays",
-    content: "8:30 AM - 4:30 PM",
+    hours: "8:30 AM - 4:30 PM",
   },
   {
-    icon: Clock,
     title: "Weekends",
-    content: "Closed",
+    hours: "Closed",
   },
 ];
 
@@ -81,10 +82,10 @@ export default function ContactPage() {
                 <section className="py-24">
                   <div className="container flex flex-col items-center text-center">
                     <div className="flex items-center gap-2 mb-2">
-                      <item.icon className="h-5 w-5" />
+                      <Clock className="h-5 w-5" />
                       <h2 className="text-2xl font-semibold">{item.title}</h2>
                     </div>
-                    <p className="text-muted-foreground">{item.content}</p>
+                    <p className="text-muted-foreground">{item.hours}</p>
                   </div>
                 </section>
               </div>
@@ -95,42 +96,35 @@ export default function ContactPage() {
 
       <div className="border-grid border-b">
         <div className="container-wrapper">
-          <div className="grid grid-cols-1 md:grid-cols-2">
-            {contactInfo.map((item, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "border-grid border-b",
-                  index % 2 === 0 && "md:border-r",
-                )}
-              >
-                <section className="py-24">
-                  <div className="container flex flex-col items-center text-center">
-                    <div className="flex items-center gap-2 mb-2">
-                      <item.icon className="h-5 w-5" />
-                      <h2 className="text-2xl font-semibold">{item.title}</h2>
-                    </div>
-                    {item.href ? (
+          <section className="py-24">
+            <div className="container">
+              <h2 className="text-3xl font-semibold text-center mb-12">
+                Contact Information
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {contactInfo.map((info, index) => (
+                  <Card key={index} className="bg-muted/40">
+                    <CardHeader>
+                      <CardTitle className="flex items-center gap-2">
+                        <info.icon className="h-5 w-5" />
+                        {info.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
                       <a
-                        href={item.href}
+                        href={info.href}
+                        target={info.target}
+                        rel={info.rel}
                         className="text-muted-foreground hover:text-primary transition-colors"
-                        {...(item.external && {
-                          target: "_blank",
-                          rel: "noopener noreferrer",
-                        })}
                       >
-                        {item.content}
+                        {info.content}
                       </a>
-                    ) : (
-                      <span className="text-muted-foreground">
-                        {item.content}
-                      </span>
-                    )}
-                  </div>
-                </section>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          </section>
         </div>
       </div>
     </main>
