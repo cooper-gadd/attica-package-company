@@ -44,8 +44,7 @@ export default function Home() {
                   Attica Package Company Inc.
                 </h1>
                 <p className="text-lg text-muted-foreground">
-                  Your premier source for quality wood products and professional
-                  services.
+                  Your premier source for your landscaping needs.
                 </p>
               </div>
             </div>

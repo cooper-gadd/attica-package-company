@@ -138,24 +138,6 @@ export default function PelletsPage() {
           </section>
         </div>
       </div>
-
-      <div className="border-grid border-b">
-        <div className="container-wrapper">
-          <section className="py-24">
-            <div className="container">
-              <div className="max-w-3xl mx-auto text-center">
-                <h2 className="text-3xl font-bold mb-6">Ready to Order?</h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Contact us to place an order for our premium pellets.
-                </p>
-                <Button asChild>
-                  <Link href="/contact">Contact Us</Link>
-                </Button>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
     </main>
   );
 }
