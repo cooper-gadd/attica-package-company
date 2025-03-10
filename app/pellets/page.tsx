@@ -121,7 +121,7 @@ export default function PelletsPage() {
               <div className="flex flex-col lg:flex-row items-center gap-12">
                 <div className="w-full lg:w-1/2 text-center md:text-start">
                   <h2 className="text-3xl font-semibold mb-6">
-                    Pellets for your BBQ
+                    Pellets for Your BBQ
                   </h2>
                   <div className="space-y-6">
                     <p className="text-lg text-muted-foreground leading-relaxed">
@@ -159,7 +159,7 @@ export default function PelletsPage() {
               <div className="flex flex-col lg:flex-row items-center gap-12">
                 <div className="w-full lg:w-1/2 text-center md:text-start">
                   <h2 className="text-3xl font-semibold mb-6">
-                    Pellets for your home
+                    Pellets for Your Home
                   </h2>
                   <div className="space-y-6">
                     <p className="text-lg text-muted-foreground leading-relaxed">
