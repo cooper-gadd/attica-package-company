@@ -138,8 +138,8 @@ export default function PelletsPage() {
                 <div className="w-full lg:w-1/2">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                     <Image
-                      src="/placeholder.svg"
-                      alt="Playground Home"
+                      src="/pellets-lineup.jpg"
+                      alt="Pellets lineup"
                       width={800}
                       height={600}
                       className="object-cover w-full h-full"
@@ -173,8 +173,8 @@ export default function PelletsPage() {
                 <div className="w-full lg:w-1/2">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                     <Image
-                      src="/placeholder.svg"
-                      alt="Playground Home"
+                      src="/pellets-premium.jpg"
+                      alt="Pellets Premium"
                       width={800}
                       height={600}
                       className="object-cover w-full h-full"

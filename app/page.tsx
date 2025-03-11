@@ -110,8 +110,8 @@ export default function Home() {
                 <div className="w-full lg:w-1/2">
                   <div className="aspect-[4/3] relative overflow-hidden rounded-lg">
                     <Image
-                      src="/placeholder.svg"
-                      alt="Our Business"
+                      src="/yard.jpg"
+                      alt="Yard"
                       width={800}
                       height={600}
                       className="object-cover w-full h-full"
@@ -131,11 +131,11 @@ export default function Home() {
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl font-bold mb-6">Need Help?</h2>
                 <p className="text-lg text-muted-foreground mb-6">
-                  Contact us to discuss your needs or request a quote for any of
+                  Reach out to discuss your needs or request a quote for any of
                   our products.
                 </p>
                 <Button asChild>
-                  <Link href="/contact">Get in Touch</Link>
+                  <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
             </div>
