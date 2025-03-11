@@ -3,8 +3,9 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Call to get a quote",
+  description: "Reach out to us for a quote.",
 };
+
 export default function ContactPage() {
   return (
     <main>
@@ -34,21 +35,6 @@ export default function ContactPage() {
                   Contact Information
                 </h2>
                 <div className="space-y-6">
-                  <a
-                    href="https://www.google.com/maps/search/?api=1&query=45 Windsor St, Attica, NY 14011"
-                    className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <MapPinHouse className="h-5 w-5" />
-                    <div>
-                      <p className="font-medium">Address</p>
-                      <span className="text-lg">
-                        45 Windsor St, Attica, NY 14011
-                      </span>
-                    </div>
-                  </a>
-
                   <a
                     href="tel:585-591-0510"
                     className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
@@ -81,15 +67,60 @@ export default function ContactPage() {
                       <span className="text-lg">(585) 591-3655</span>
                     </div>
                   </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
 
-                  <div className="pt-6 border-t">
-                    <div className="flex items-center space-x-3 text-muted-foreground">
-                      <Clock className="h-5 w-5" />
-                      <p className="font-medium">Business Hours</p>
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <section className="py-24">
+            <div className="container">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl font-semibold mb-8">Our Location</h2>
+                <div className="space-y-6">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=45 Windsor St, Attica, NY 14011"
+                    className="flex items-center space-x-3 text-muted-foreground hover:text-primary transition-colors"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <MapPinHouse className="h-5 w-5" />
+                    <div>
+                      <p className="font-medium">Address</p>
+                      <span className="text-lg">
+                        45 Windsor St, Attica, NY 14011
+                      </span>
                     </div>
-                    <div className="mt-2 ml-8 space-y-1 text-muted-foreground">
-                      <p className="text-lg">Weekdays: 8:30 AM - 4:30 PM</p>
-                      <p className="text-lg">Weekends: Closed</p>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div className="border-grid border-b">
+        <div className="container-wrapper">
+          <section className="py-24">
+            <div className="container">
+              <div className="max-w-3xl mx-auto">
+                <h2 className="text-3xl font-semibold mb-8">Business Hours</h2>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-3 text-muted-foreground">
+                    <Clock className="h-5 w-5" />
+                    <div>
+                      <p className="font-medium">Weekdays</p>
+                      <span className="text-lg">8:30 AM - 4:30 PM</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-3 text-muted-foreground">
+                    <Clock className="h-5 w-5" />
+                    <div>
+                      <p className="font-medium">Weekends</p>
+                      <span className="text-lg">Closed</span>
                     </div>
                   </div>
                 </div>
