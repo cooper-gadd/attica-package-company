@@ -108,7 +108,7 @@ export default function PlaygroundPage() {
                       wood chips are then processed through our Morbark 6400 XT
                       Horizontal Grinder to obtain the desired specification.
                       The material is then sent thru our Star Screener to remove
-                      sawdust.
+                      fines.
                     </p>
                   </div>
                 </div>
